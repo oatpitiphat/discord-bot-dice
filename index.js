@@ -3,8 +3,14 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const http = require('http');
 
-//init environment config
-dotenv.config();
+if (process.env.NODE_ENV !== 'production') {
+  //init environment config
+  dotenv.config();
+}
+
+console.log("ENV : " + process.env.NODE_ENV);
+console.log("TOKEN : " + process.env.BOT_TOKEN);
+
 
 http.createServer((req, res) => {
   res.writeHead(200, {
