@@ -8,17 +8,13 @@ if (process.env.NODE_ENV !== 'production') {
   dotenv.config();
 }
 
-console.log("ENV : " + process.env.NODE_ENV);
-console.log("TOKEN : " + process.env.BOT_TOKEN);
-
-
 http.createServer((req, res) => {
   res.writeHead(200, {
     'Content-type': 'text/plain'
   });
   res.write(`DICE RANDOM BOT FOR DISCORD ${process.env.BOT_TOKEN}`);
   res.end();
-}).listen(3000);
+}).listen(process.env.PORT || 3000)
 
 
 client.on('ready', () => {
