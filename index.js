@@ -12,7 +12,8 @@ http.createServer((req, res) => {
   res.writeHead(200, {
     'Content-type': 'text/plain'
   });
-  res.write(`DICE RANDOM BOT FOR DISCORD ${process.env.BOT_TOKEN}`);
+  res.write(`DICE RANDOM BOT FOR DISCORD`);
+  res.write(`JUST TYPE /dice IN YOUR TEXT CHANNEL`);
   res.end();
 }).listen(process.env.PORT || 3000)
 
