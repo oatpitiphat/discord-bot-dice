@@ -29,8 +29,12 @@ client.on('message', message => {
   }
 });
 
-client.login(process.env.BOT_TOKEN);
 
 const random = (min, max) => (Math.floor(
   Math.random() * (max - min) + min
 ));
+
+
+
+
+client.login(process.env.BOT_TOKEN);
