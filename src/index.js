@@ -23,7 +23,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-  if (message.content === '!dice') {
+  if (message.content === '/dice') {
     const dice = random(1, 6);
     message.reply(dice);
   }
