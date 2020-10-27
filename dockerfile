@@ -1,12 +1,13 @@
-FROM node:10-slim
+FROM node:slim
 
-RUN mkdir -p /src
-WORKDIR /src
+WORKDIR /app
 
-COPY package.json /src
+COPY package.json ./app
+
 RUN npm install
-COPY . /src
 
-EXPOSE 3000
+COPY . .
+
+EXPOSE 8080
 
 CMD [ "npm", "start" ]
