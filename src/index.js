@@ -8,6 +8,10 @@ if (process.env.NODE_ENV !== 'production') {
   dotenv.config();
 }
 
+console.log("ENV : " + process.env.NODE_ENV);
+console.log("TOKEN : " + process.env.BOT_TOKEN);
+
+
 http.createServer((req, res) => {
   res.writeHead(200, {
     'Content-type': 'text/plain'
@@ -15,7 +19,7 @@ http.createServer((req, res) => {
   res.write(`DICE RANDOM BOT FOR DISCORD`);
   res.write(`JUST TYPE /dice IN YOUR TEXT CHANNEL`);
   res.end();
-}).listen(process.env.PORT || 3000)
+}).listen(3000);
 
 
 client.on('ready', () => {
